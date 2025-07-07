@@ -1,0 +1,82 @@
+body {
+  background: linear-gradient(135deg, #ff0077, #7e00c0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+  background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #333;
+  letter-spacing: 2px;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(6, 70px);
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.item {
+  width: 70px;
+  height: 70px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  background: #f3f3f3;
+}
+
+.item span {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.item.flipped span,
+.item.matched span {
+  opacity: 1;
+}
+
+.item.matched {
+  background-color: #c1ffc1;
+  border-color: #6fd86f;
+  pointer-events: none;
+}
+
+.reset {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.reset:hover {
+  background-color: #333;
+}
