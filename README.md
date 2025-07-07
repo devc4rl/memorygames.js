@@ -24,4 +24,4 @@ Este projeto é um jogo da memória simples e interativo desenvolvido em front-e
 ## Rodando o Projeto
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/jogo-memoria-emojis.git
+   git clone [https://github.com/devc4rl/memorygames.git]
