@@ -80,3 +80,104 @@ h2 {
 .reset:hover {
   background-color: #333;
 }
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 10px 0 20px;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  transition: width 1s linear;
+}
+
+
+.message {
+  font-size: 24px;
+  color: #fff;
+  background-color: #28a745;
+  padding: 10px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: none;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.item {
+  perspective: 1000px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.item.flipped {
+  transform: rotateY(180deg);
+}
+
+.item span {
+  backface-visibility: hidden;
+  position: absolute;
+  transform: rotateY(180deg);
+  opacity: 1;
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .game {
+    grid-template-columns: repeat(4, 60px);
+    gap: 10px;
+  }
+
+  .item {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .scoreboard {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .reset {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .message {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+}
